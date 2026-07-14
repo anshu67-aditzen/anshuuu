@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Eternal Story - Anshu & Me</title>
+    <!-- Luxury Serif and Clean Geometric Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+    <!-- Space Atmosphere Particles -->
+    <div class="stars-container"></div>
+    <div class="petal-container" id="petal-container"></div>
+
+    <!-- Main Navigation Bar (Visible Immediately) -->
+    <nav class="luxury-navbar" id="main-nav">
+        <div class="nav-logo">A &amp; A</div>
+        <div class="audio-control-panel">
+            <button id="toggle-music-btn" class="audio-btn pulse-button" title="Toggle Music">
+                <span class="sound-icon-on hidden">🔊</span>
+                <span class="sound-icon-off">🔇</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SPA Content Sections (Visible Immediately) -->
+    <main class="content-container" id="main-content">
+
+        <!-- 1. Eternal Loop Section (Tilted 3D Ring Carousel) -->
+        <section id="eternal-loop" class="page-section active">
+            <!-- Playful Secret Header -->
+            <div class="secret-header-box">
+                <p class="secret-text">Secret: Anshu, you know I have multiple GFs... yeh dekho:</p>
+            </div>
+
+            <!-- Tilted 3D Ring Wrapper -->
+            <div class="carousel-3d-container">
+                <!-- Tilted Ring Stage -->
+                <div class="carousel-3d-stage" id="carousel-stage">
+                    <!-- 37 vertical cards will be generated dynamically by JS -->
+                </div>
+
+                <!-- Floating Center Selected Card -->
+                <div class="featured-card-wrapper" id="featured-card-wrapper">
+                    <div class="featured-card" id="featured-card">
+                        <div class="featured-img-frame" id="featured-img-frame">
+                            <img id="featured-img-blur" class="blur-backdrop" src="" alt="">
+                            <img id="featured-img" src="" alt="Anshu">
+                        </div>
+                        <div class="featured-details">
+                            <h3 id="featured-title">First Encounter</h3>
+                            <p id="featured-location">MUMBAI · RETREAT</p>
+                            <div class="featured-click-hint">CLICK TO ENLARGE +</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Gift Message -->
+            <div class="gift-message-box" id="gift-message-box">
+                <div class="heart-pulse-icon">❤️</div>
+                <p class="gift-message">This is a small gift from your husband.</p>
+            </div>
+
+            <!-- Secret Button Container -->
+            <div class="secret-btn-container">
+                <button class="secret-btn" id="secret-btn">Click to Read a military secret</button>
+            </div>
+        </section>
+
+        <!-- 2. Lyrics Page Section (Hidden initially) -->
+        <section id="love-letter" class="page-section">
+            <div class="lyrics-box">
+                <div class="lyrics-rain-overlay" id="lyrics-rain-overlay"></div>
+                <div class="lyrics-seal">🌧️</div>
+                <h2 class="letter-title">Baarish Mein Tum</h2>
+                
+                <!-- Real-time lyrics scroll sheet -->
+                <div class="lyrics-scroll-sheet" id="lyrics-scroll-sheet">
+                    <p class="lyric-line" data-start="0.0" data-end="4.5">Tumhein bolna pasand hai, mujhe bolte hue tum</p>
+                    <p class="lyric-line" data-start="4.5" data-end="9.0">Tumhein hasna pasand hai, mujhe haste hue tum</p>
+                    <p class="lyric-line" data-start="9.0" data-end="13.5">Bas itna hi farak hai teri meri pasand mein</p>
+                    <p class="lyric-line" data-start="13.5" data-end="18.0">Tumhein sab kuch pasand hai aur mujhe pasand ho tum</p>
+                    <p class="lyric-line" data-start="18.0" data-end="23.5">Tumko baarish pasand hai, mujhko baarish mein tum</p>
+                    <p class="lyric-line" data-start="23.5" data-end="29.0">Tumko baarish pasand hai, mujhko baarish mein tum</p>
+                </div>
+
+                <!-- Bouncing word captions stage -->
+                <div class="dancing-word-stage" id="dancing-word-stage"></div>
+
+                <div class="lyrics-actions">
+                    <button class="proceed-milestones-btn hidden" id="proceed-milestones-btn">Proceed to Our Journey →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Heartbeat Timeline Section (Hidden initially) -->
+        <section id="milestones-page" class="page-section">
+            <div class="section-header">
+                <span class="section-tag">Our Heartbeat Journey</span>
+                <h2 class="section-title">The Milestones</h2>
+                <p class="section-desc">Scroll down to trace our timeline. Click the pulsing hearts to unlock each surprise memory.</p>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- SVG scroll-draw ECG path -->
+                <svg class="timeline-svg" id="timeline-svg" viewBox="0 0 100 1500" preserveAspectRatio="none">
+                    <!-- Background path -->
+                    <path class="ecg-bg-path" d="M 50,0 Q 50,100 50,150 L 50,170 L 47,175 L 53,160 L 45,210 L 55,140 L 48,185 L 50,190 L 50,300 Q 50,400 50,450 L 50,470 L 47,475 L 53,460 L 45,510 L 55,440 L 48,485 L 50,490 L 50,600 Q 50,700 50,750 L 50,770 L 47,775 L 53,760 L 45,810 L 55,840 L 48,785 L 50,790 L 50,900 Q 50,1000 50,1050 L 50,1070 L 47,1075 L 53,1060 L 45,1110 L 55,1040 L 48,1085 L 50,1090 L 50,1200 L 50,1500" />
+                    <!-- Active path -->
+                    <path class="ecg-glow-path" id="ecg-glow-path" d="M 50,0 Q 50,100 50,150 L 50,170 L 47,175 L 53,160 L 45,210 L 55,140 L 48,185 L 50,190 L 50,300 Q 50,400 50,450 L 50,470 L 47,475 L 53,460 L 45,510 L 55,440 L 48,485 L 50,490 L 50,600 Q 50,700 50,750 L 50,770 L 47,775 L 53,760 L 45,810 L 55,840 L 48,785 L 50,790 L 50,900 Q 50,1000 50,1050 L 50,1070 L 47,1075 L 53,1060 L 45,1110 L 55,1040 L 48,1085 L 50,1090 L 50,1200 L 50,1500" />
+                </svg>
+
+                <!-- Milestone 1 -->
+                <div class="milestone-entry left-side" style="top: 120px;">
+                    <div class="milestone-node" data-index="1">❤️</div>
+                    <div class="milestone-card locked" id="card-1">
+                        <div class="card-lock-overlay">
+                            <span class="lock-icon">🔒</span>
+                            <p>Unlock Memory</p>
+                        </div>
+                        <div class="polaroid-frame">
+                            <img src="assets/images/IMG-20251002-WA0018.jpg" alt="First Memory">
+                            <div class="polaroid-caption">1. The First Contact</div>
+                        </div>
+                        <div class="diary-note">
+                            <p class="diary-date">August</p>
+                            <p class="diary-text">"Yaad hai tum pehli baar 5 sept ko mere saath baithi thi hayeee diwana bana diya tha tumne"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="milestone-entry right-side" style="top: 420px;">
+                    <div class="milestone-node" data-index="2">❤️</div>
+                    <div class="milestone-card locked" id="card-2">
+                        <div class="card-lock-overlay">
+                            <span class="lock-icon">🔒</span>
+                            <p>Unlock Memory</p>
+                        </div>
+                        <div class="polaroid-frame">
+                            <img src="assets/images/IMG-20251010-WA0013.jpg" alt="First Date">
+                            <div class="polaroid-caption">2. When I Proposed</div>
+                        </div>
+                        <div class="diary-note">
+                            <p class="diary-date">21 September</p>
+                            <p class="diary-text">"My hands were litrally shaking when i proposed you you were like nahi neet ke baad my god how i convinced you "Pehle istemaal kare fir vishwas kare " yaad hai woh ki ek hafta dekhungi fir decide karungi 😂😂"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="milestone-entry left-side" style="top: 720px;">
+                    <div class="milestone-node" data-index="3">❤️</div>
+                    <div class="milestone-card locked" id="card-3">
+                        <div class="card-lock-overlay">
+                            <span class="lock-icon">🔒</span>
+                            <p>Unlock Memory</p>
+                        </div>
+                        <div class="polaroid-frame">
+                            <img src="assets/images/IMG-20251023-WA0018.jpg" alt="Late Night Chats">
+                            <div class="polaroid-caption">3. Sweet Convos</div>
+                        </div>
+                        <div class="diary-note">
+                            <p class="diary-date">October 23, 2025</p>
+                            <p class="diary-text">"Talking to you all day, sharing our deepest secrets and dreams. You became my home, my sukoon, and my favorite notification."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="milestone-entry right-side" style="top: 1020px;">
+                    <div class="milestone-node" data-index="4">❤️</div>
+                    <div class="milestone-card locked" id="card-4">
+                        <div class="card-lock-overlay">
+                            <span class="lock-icon">🔒</span>
+                            <p>Unlock Memory</p>
+                        </div>
+                        <div class="polaroid-frame">
+                            <img src="assets/images/IMG-20260502-WA0008.jpg" alt="The Forever Promise">
+                            <div class="polaroid-caption">4. The Forever Promise</div>
+                        </div>
+                        <div class="diary-note">
+                            <p class="diary-text">"I promised to love you, cherish you, and tease you (my ladaku vimaan!) for the rest of my days. This is just the beginning of our endless story."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destiny Trigger (Left Side of Card 4, top: 1260px) -->
+                <div class="destiny-trigger-container" style="top: 1260px;">
+                    <button class="destiny-btn" id="destiny-btn">Unlock Our Destiny →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Our Destiny Counter Section (Hidden initially) -->
+        <section id="destiny-counter-page" class="page-section">
+            <div class="cosmos-bg" id="cosmos-bg"></div>
+            
+            <div class="section-header">
+                <span class="section-tag">Our Universe Together</span>
+                <h2 class="section-title">Our Destiny Counter</h2>
+                <p class="section-desc">Every millisecond spent loving you is a lifetime of happiness.</p>
+            </div>
+
+            <!-- Ticker box -->
+            <div class="destiny-ticker-box">
+                <div class="ticker-label">We are together since 21 September 2025</div>
+                <div class="ticker-digits" id="destiny-ticker">
+                    <!-- Dynamic counters generated in JS -->
+                </div>
+            </div>
+
+            <!-- Future dreams -->
+            <div class="dreams-section-header">
+                <h3 class="dreams-title">Our Future Dreams</h3>
+                <p class="dreams-desc">The destinations we will explore, and the life we will build, side-by-side.</p>
+            </div>
+
+            <div class="dreams-grid">
+                <!-- Card 1 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/indian_wedding_destiny.webp" alt="Our Wedding">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Our Wedding 💍</h4>
+                        <p class="dream-card-text">This would be us very soon. We will be always together, and hume ek dusre se dur nahi rehne padega. Tum jii bhar ke kisses karna and masti bhi 🫂🫂</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/dubai_couple_destiny.webp" alt="Dubai Suite">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Dubai Suite 🌆</h4>
+                        <p class="dream-card-text">This is us, Anshu! Hum bhi aise hi Dubai jaayenge and ek saath honge. Tab koi uncle kiss karte hue nahi dekhenge 😂😂</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/bmw_m5_destiny.webp" alt="Late Night Drives">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Late Night Drives 🏎️</h4>
+                        <p class="dream-card-text">We will be going together on late night drives in this car, doing crazy things and all alone loving moments.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/private_jet_luxury.webp" alt="Private Jet">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Flying Private ✈️</h4>
+                        <p class="dream-card-text">Tumhe iss duniya ki saari cheezien dena hi my responsibility. Flying private with you will be one of the best feelings in the world.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/luxury_yacht_sunset.webp" alt="Yacht Life">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Yacht Escapades ⛵</h4>
+                        <p class="dream-card-text">This is us few years later. Imagining hugging you on a private yacht with family inside, and taking the risk of hugging you 😂</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/royal_palace_destiny.webp" alt="Maharani Home">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Our Palace 🏰</h4>
+                        <p class="dream-card-text">You will be the Maharani of my home very soon. Be ready, Maharani jiii, apke Maharaaj aapko lene aayenge.</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="dream-card">
+                    <div class="dream-image-wrapper">
+                        <img src="assets/images/swiss_alps_cabin.webp" alt="Swiss Alps Cabin">
+                    </div>
+                    <div class="dream-content">
+                        <h4 class="dream-card-title">Swiss Alps Glass Cabin 🏔️</h4>
+                        <p class="dream-card-text">Cozying up under the Northern Lights in a Swiss glass cabin with hot chocolate. Just you and me in our warm little bubble, loving each other forever.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Promise Button -->
+            <div class="final-action-box" style="text-align: center; margin: 4rem 0 6rem; z-index: 5; position: relative;">
+                <button class="destiny-btn" id="final-promise-btn" style="box-shadow: 0 0 25px rgba(255, 0, 127, 0.7); opacity: 1; pointer-events: auto;">Unlock Our Final Promise →</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox for Image Zoom -->
+    <div class="lightbox-overlay hidden" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Enlarged Photo">
+    </div>
+
+    <!-- I Love You Explosion Screen -->
+    <div class="love-explosion-overlay hidden" id="love-explosion-overlay">
+        <div class="love-explosion-content">
+            <h1 class="love-text-drop" id="love-text-drop">I LOVE YOU</h1>
+        </div>
+    </div>
+
+    <!-- Proposal Prank Overlay -->
+    <div class="jumpscare-overlay hidden" id="jumpscare-overlay">
+        <!-- Proposal Screen (Revealed directly on click) -->
+        <div class="proposal-screen hidden" id="proposal-screen">
+            <div class="proposal-card">
+                <div class="proposal-emoji">👉👈</div>
+                <h2 class="proposal-love-text">I love you soo much ❤️❤️❤️</h2>
+                <h1 class="proposal-question">Will you be my wife? 💍</h1>
+                <div class="proposal-actions">
+                    <button class="proposal-btn" id="proposal-yes-1">Yes, I will! 💍</button>
+                    <button class="proposal-btn" id="proposal-yes-2">Yes, a million times yes! 💖</button>
+                </div>
+            </div>
+        </div>
+        <!-- Celebration Screen (Revealed on Yes click) -->
+        <div class="celebration-screen hidden" id="celebration-screen">
+            <div class="celebration-card">
+                <div class="celebration-hearts">💖🎉✨</div>
+                <h1 class="celebration-title">Yayyyy! Hamaari Shaadi Pakki! 🥳👰‍♀️🤵‍♂️</h1>
+                <p class="celebration-subtitle">I promise to make you the happiest girl in the world, my Maharani! 🫂❤️</p>
+                <p class="celebration-kisses">Infinite kisses and hugs coming your way! 😘💋🫂</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Entrypoint -->
+    <script src="app.js?v=5"></script>
+</body>
+</html>
